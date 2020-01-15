@@ -20,6 +20,7 @@ public class PrincipalGUI {
 
 	private JFrame frame;
 	private JTextField textField;
+	private Milistener action = new Milistener();
 	private JButton button_atras;
 	private JButton button_siguiente;
 	private JButton btnSave;
@@ -28,6 +29,15 @@ public class PrincipalGUI {
 	private JButton btnCanal_3;
 	private JButton btnCanal_4;
 	private JButton btnOnOff;
+	private JButton btnAmFm;
+	private JButton btnCanal_5;
+	private JButton btnCanal_6;
+	private JButton btnCanal_7;
+	private JButton btnCanal_8;
+	private JButton btnCanal_9;
+	private JButton btnCanal_10;
+	private JButton btnCanal_11;
+	private JButton btnCanal_12;
 	
 	
 	/**
@@ -64,70 +74,87 @@ public class PrincipalGUI {
 		
 		button_atras = new JButton("<");
 		button_atras.setBounds(440, 28, 64, 25);
+		button_atras.addActionListener(action);
 		frame.getContentPane().add(button_atras);
 		
 		button_siguiente = new JButton(">");
 		button_siguiente.setBounds(516, 28, 70, 25);
+		button_siguiente.addActionListener(action);
 		frame.getContentPane().add(button_siguiente);
 		
 		btnSave = new JButton("Save");
 		btnSave.setBounds(516, 101, 97, 25);
+		btnSave.addActionListener(action);
 		frame.getContentPane().add(btnSave);
 		
 		btnCanal_1 = new JButton("Canal 1");
 		btnCanal_1.setBounds(150, 101, 81, 25);
+		btnCanal_1.addActionListener(action);
 		frame.getContentPane().add(btnCanal_1);
 		
 		btnCanal_2 = new JButton("Canal 2");
 		btnCanal_2.setBounds(238, 101, 81, 25);
+		btnCanal_2.addActionListener(action);
 		frame.getContentPane().add(btnCanal_2);
 		
 		btnCanal_3 = new JButton("Canal 3");
 		btnCanal_3.setBounds(331, 101, 81, 25);
+		btnCanal_3.addActionListener(action);
 		frame.getContentPane().add(btnCanal_3);
 		
 		btnCanal_4 = new JButton("Canal 4");
 		btnCanal_4.setBounds(424, 101, 80, 25);
+		btnCanal_4.addActionListener(action);
 		frame.getContentPane().add(btnCanal_4);
 		
 		btnOnOff = new JButton("ON / OFF");
 		btnOnOff.setBounds(12, 13, 97, 25);
+		btnOnOff.addActionListener(action);
 		frame.getContentPane().add(btnOnOff);
 		
-		JButton btnAmFm = new JButton("AM / FM");
+		btnAmFm = new JButton("AM / FM");
 		btnAmFm.setBounds(12, 82, 97, 25);
+		btnAmFm.addActionListener(action);
 		frame.getContentPane().add(btnAmFm);
 		
-		JButton btnCanal_5 = new JButton("Canal 5");
+		btnCanal_5 = new JButton("Canal 5");
 		btnCanal_5.setBounds(150, 144, 81, 25);
+		btnCanal_5.addActionListener(action);
 		frame.getContentPane().add(btnCanal_5);
 		
-		JButton btnCanal_6 = new JButton("Canal 6");
+		btnCanal_6 = new JButton("Canal 6");
 		btnCanal_6.setBounds(238, 144, 81, 25);
+		btnCanal_6.addActionListener(action);
 		frame.getContentPane().add(btnCanal_6);
 		
-		JButton btnCanal_7 = new JButton("Canal 7");
+		btnCanal_7 = new JButton("Canal 7");
 		btnCanal_7.setBounds(327, 144, 81, 25);
+		btnCanal_7.addActionListener(action);
 		frame.getContentPane().add(btnCanal_7);
 		
-		JButton btnCanal_8 = new JButton("Canal 8");
+		btnCanal_8 = new JButton("Canal 8");
 		btnCanal_8.setBounds(424, 144, 81, 25);
+		btnCanal_8.addActionListener(action);
 		frame.getContentPane().add(btnCanal_8);
 		
-		JButton btnCanal_9 = new JButton("Canal 9");
+		btnCanal_9 = new JButton("Canal 9");
 		btnCanal_9.setBounds(150, 188, 81, 25);
+		btnCanal_9.addActionListener(action);
 		frame.getContentPane().add(btnCanal_9);
 		
-		JButton btnCanal_10 = new JButton("Canal 10");
+		btnCanal_10 = new JButton("Canal 10");
 		btnCanal_10.setBounds(248, 188, 91, 25);
+		btnCanal_10.addActionListener(action);
 		frame.getContentPane().add(btnCanal_10);
 		
-		JButton btnCanal_11 = new JButton("Canal 11");
+		btnCanal_11 = new JButton("Canal 11");
 		btnCanal_11.setBounds(363, 188, 91, 25);
+		btnCanal_11.addActionListener(action);
 		frame.getContentPane().add(btnCanal_11);
 		
-		JButton btnCanal_12 = new JButton("Canal 12");
+		btnCanal_12 = new JButton("Canal 12");
 		btnCanal_12.setBounds(150, 238, 97, 25);
+		btnCanal_12.addActionListener(action);
 		frame.getContentPane().add(btnCanal_12);
 		
 		textField = new JTextField();
@@ -141,7 +168,85 @@ public class PrincipalGUI {
 	{
 		public void actionPerformed(ActionEvent e)
 		{
-			
+			if(e.getSource() == btnCanal_1)
+			{
+
+			}
+
+			if (e.getSource()==btnCanal_2)
+			{
+
+			}
+
+			if(e.getSource() == btnCanal_3)
+			{
+
+			}
+
+			if (e.getSource() == btnCanal_4)
+			{
+
+			}
+
+			if ( e.getSource() == btnCanal_5)
+			{
+				
+			}
+
+			if(e.getSource() == btnCanal_6)
+			{
+
+			}
+
+			if(e.getSource() == btnCanal_7)
+			{
+
+			}
+
+			if(e.getSource() == btnCanal_8)
+			{
+
+			}
+
+			if(e.getSource() == btnCanal_9)
+			{
+				
+			}
+
+			if(e.getSource() == btnCanal_10)
+			{
+				
+			}
+
+			if(e.getSource() == btnCanal_11)
+			{
+				
+			}
+
+			if(e.getSource() == btnCanal_12)
+			{
+				
+			}
+
+			if(e.getSource() == button_atras)
+			{
+
+			}
+
+			if(e.getSource() == button_siguiente)
+			{
+
+			}
+
+			if ( e.getSource() == btnSave)
+			{
+
+			}
+
+			if(e.getSource() == btnOnOff)
+			{
+
+			}
 		}
 	}
 }
