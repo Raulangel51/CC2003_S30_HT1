@@ -38,7 +38,8 @@ public class PrincipalGUI {
 	private JButton btnCanal_10;
 	private JButton btnCanal_11;
 	private JButton btnCanal_12;
-	
+	Radio radio = new Radio();
+	int cont = 0;
 	
 	/**
 	 * Launch the application.
@@ -245,8 +246,24 @@ public class PrincipalGUI {
 
 			if(e.getSource() == btnOnOff)
 			{
+				
 
+			}
+			if(e.getSource() == btnAmFm)
+			{
+				
+				cont++;
+				if (cont == 1) {
+					boolean tipo = false;
+					radio.cambioTipoFrecuencia(tipo);
+				}
+				if (cont == 2) {
+					boolean tipo = true;
+					cont = 0;
+					radio.cambioTipoFrecuencia(tipo);
+				}
 			}
 		}
 	}
 }
+
