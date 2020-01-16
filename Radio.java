@@ -2,7 +2,10 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Radio implements RadioInterface{
-	
+	private boolean tipo;
+	private boolean tipoFrecuencia;
+	private double estacion;
+	private int boton;
 	
 	public Radio() {
 		
@@ -16,18 +19,27 @@ public class Radio implements RadioInterface{
 
 	@Override
 	public void cambioTipoFrecuencia(boolean tipo) {
+		
+		if (tipo == true) {
+			JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: PM");
+		}
+		if (tipo == false) {
+			JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: AM");
+		}
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void encender() {
+		JOptionPane.showMessageDialog(null, "La radio se ha encendido");
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void apagar() {
+		JOptionPane.showMessageDialog(null, "La radio se ha apagado");
 		// TODO Auto-generated method stub
 		
 	}
@@ -46,3 +58,4 @@ public class Radio implements RadioInterface{
 	
 
 }
+
