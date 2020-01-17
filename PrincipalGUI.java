@@ -191,62 +191,75 @@ public class PrincipalGUI {
 		{
 			if(e.getSource() == btnCanal_1)
 			{
+				radio .setEstacion(radio.seleccionarEstacion(0, radio.isTipoFrecuencia()));
+				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 
 			}
 
 			if (e.getSource()==btnCanal_2)
 			{
-
+				radio .setEstacion(radio.seleccionarEstacion(1, radio.isTipoFrecuencia()));
+				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 			}
 
 			if(e.getSource() == btnCanal_3)
 			{
-
+				radio .setEstacion(radio.seleccionarEstacion(2, radio.isTipoFrecuencia()));
+				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 			}
 
 			if (e.getSource() == btnCanal_4)
 			{
-
+				radio .setEstacion(radio.seleccionarEstacion(3, radio.isTipoFrecuencia()));
+				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 			}
 
 			if ( e.getSource() == btnCanal_5)
 			{
-				
+				radio .setEstacion(radio.seleccionarEstacion(4, radio.isTipoFrecuencia()));
+				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 			}
 
 			if(e.getSource() == btnCanal_6)
 			{
-
+				radio .setEstacion(radio.seleccionarEstacion(5, radio.isTipoFrecuencia()));
+				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 			}
 
 			if(e.getSource() == btnCanal_7)
 			{
-
+				radio .setEstacion(radio.seleccionarEstacion(6, radio.isTipoFrecuencia()));
+				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 			}
 
 			if(e.getSource() == btnCanal_8)
 			{
-
+				radio .setEstacion(radio.seleccionarEstacion(7, radio.isTipoFrecuencia()));
+				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 			}
 
 			if(e.getSource() == btnCanal_9)
 			{
-				
+				radio .setEstacion(radio.seleccionarEstacion(8, radio.isTipoFrecuencia()));
+				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 			}
 
 			if(e.getSource() == btnCanal_10)
 			{
-				
+				radio .setEstacion(radio.seleccionarEstacion(9, radio.isTipoFrecuencia()));
+				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 			}
 
 			if(e.getSource() == btnCanal_11)
 			{
-				
+				radio .setEstacion(radio.seleccionarEstacion(10, radio.isTipoFrecuencia()));
+				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 			}
 
 			if(e.getSource() == btnCanal_12)
 			{
-				
+				radio .setEstacion(radio.seleccionarEstacion(11, radio.isTipoFrecuencia()));
+				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 			}
 
 			if(e.getSource() == button_atras)
