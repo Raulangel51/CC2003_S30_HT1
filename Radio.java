@@ -10,10 +10,43 @@ public class Radio implements RadioInterface{
 	public Radio() {
 		
 	}
+	
 
 	@Override
 	public void cambioEstacion(boolean tipo, boolean tipoFrecuencia) {
 		// TODO Auto-generated method stub
+		if (tipoFrecuencia == true) {
+			if (tipo == true) {
+				if (this.getEstacion() == 107.9) {
+					this.setEstacion(87.9);
+				}
+				double a = this.getEstacion() + 0.2;
+				this.setEstacion(a);
+			}
+			if (tipo == false) {
+				if (this.getEstacion() == 87.9) {
+					this.setEstacion(107.9);
+				}
+				double a = this.getEstacion() - 0.2;
+				this.setEstacion(a);
+			}
+		}
+		if (tipoFrecuencia == false) {
+			if (tipo == true) {
+				if (this.getEstacion() == 1610) {
+					this.setEstacion(530);
+				}
+				double a = this.getEstacion() + 10;
+				this.setEstacion(a);
+			}
+			if (tipo == false) {
+				if (this.getEstacion() == 530) {
+					this.setEstacion(1610);
+				}
+				double a = this.getEstacion() - 10;
+				this.setEstacion(a);
+			}
+		}
 		
 	}
 
@@ -21,10 +54,10 @@ public class Radio implements RadioInterface{
 	public void cambioTipoFrecuencia(boolean tipo) {
 		
 		if (tipo == true) {
-			JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: PM");
+			setEstacion(88.1);
 		}
 		if (tipo == false) {
-			JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: AM");
+			setEstacion(540);
 		}
 		// TODO Auto-generated method stub
 		
@@ -55,7 +88,48 @@ public class Radio implements RadioInterface{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+
+	public boolean isTipo() {
+		return tipo;
+	}
+
+
+	public void setTipo(boolean tipo) {
+		this.tipo = tipo;
+	}
+
+
+	public boolean isTipoFrecuencia() {
+		return tipoFrecuencia;
+	}
+
+
+	public void setTipoFrecuencia(boolean tipoFrecuencia) {
+		this.tipoFrecuencia = tipoFrecuencia;
+	}
+
+
+	public double getEstacion() {
+		return estacion;
+	}
+
+
+	public void setEstacion(double estacion) {
+		this.estacion = estacion;
+	}
+
+
+	public int getBoton() {
+		return boton;
+	}
+
+
+	public void setBoton(int boton) {
+		this.boton = boton;
+	}
 	
 
 }
+
 
