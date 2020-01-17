@@ -25,7 +25,7 @@ import javax.swing.JTextArea;
 public class PrincipalGUI {
 
 	private JFrame frame;
-	private JTextField textField;
+	private JTextField txtEstacion;
 	private Milistener action = new Milistener();
 	private JButton button_atras;
 	private JButton button_siguiente;
@@ -96,18 +96,19 @@ public class PrincipalGUI {
 		btnOnOff.setBounds(26, 15, 97, 25);
 		panelRadio.add(btnOnOff);
 		
-		textField = new JTextField();
-		textField.setBounds(164, 31, 224, 40);
-		panelRadio.add(textField);
-		textField.setEditable(false);
-		textField.setColumns(10);
+		txtEstacion = new JTextField();
+		txtEstacion.setBounds(164, 31, 224, 40);
+		panelRadio.add(txtEstacion);
+		txtEstacion.setEditable(false);
+		txtEstacion.setColumns(10);
+		txtEstacion.setText(String.valueOf(radio.getEstacion()));
 		
 		button_atras = new JButton("<");
 		button_atras.setBounds(454, 30, 64, 25);
 		panelRadio.add(button_atras);
 		
 		btnSave = new JButton("Save");
-		btnSave.setBounds(530, 103, 97, 25);
+		btnSave.setBounds(486, 124, 97, 25);
 		panelRadio.add(btnSave);
 		
 		button_siguiente = new JButton(">");
@@ -180,6 +181,8 @@ public class PrincipalGUI {
 		btnAmFm.addActionListener(action);
 		
 		
+		
+		
 	}
 	
 	public class Milistener implements ActionListener
@@ -249,17 +252,35 @@ public class PrincipalGUI {
 			if(e.getSource() == button_atras)
 			{
 				radio.setTipo(false);
+				
+				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 			}
 
 			if(e.getSource() == button_siguiente)
 			{
 				radio.setTipo(true);
 				radio.cambioEstacion(radio.isTipo(), radio.isTipoFrecuencia());
+				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 			}
 
 			if ( e.getSource() == btnSave)
 			{
-
+				try
+				{
+					String canales[] = new String[12];
+					for(int i = 0; i < 12; i++)
+					{
+						canales[i] = String.valueOf(i+1);
+					}
+					JFrame frame = new JFrame("Canal de guardado");
+					String canale = (String) JOptionPane.showInputDialog(frame, "¿Canal en que desea guardar la estacion?", "Guarda", JOptionPane.QUESTION_MESSAGE, null, canales, canales[0]);
+					int canal = Integer.parseInt(canale);
+					radio.guardarEstacion(radio.getEstacion(), radio.isTipoFrecuencia(), (canal-1) );
+				}
+				catch(Exception e1)
+				{
+					JOptionPane.showMessageDialog(null, "Se ha cancelado el guardado.");
+				}
 			}
 
 			if(e.getSource() == btnOnOff)
@@ -273,6 +294,8 @@ public class PrincipalGUI {
 						component.setEnabled(false);
 					}
 					btnOnOff.setEnabled(true);
+					JOptionPane.showMessageDialog(null, "La radio se ha apagado");
+					txtEstacion.setText(" ");
 				}
 				if (cont1 == 2) 
 				{
@@ -282,6 +305,8 @@ public class PrincipalGUI {
 					{
 						componente.setEnabled(true);
 					}
+					JOptionPane.showMessageDialog(null, "La radio se ha encendido");
+					txtEstacion.setText(String.valueOf(radio.getEstacion()));
 				}
 
 			}
@@ -293,12 +318,14 @@ public class PrincipalGUI {
 					radio.setTipoFrecuencia(false);
 					JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: AM");
 					radio.cambioTipoFrecuencia(radio.isTipoFrecuencia());
+					txtEstacion.setText(String.valueOf(radio.getEstacion()));
 				}
 				if (cont == 2) {
 					radio.setTipoFrecuencia(true);
-					JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: PM");
+					JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: FM");
 					cont = 0;
 					radio.cambioTipoFrecuencia(radio.isTipoFrecuencia());
+					txtEstacion.setText(String.valueOf(radio.getEstacion()));
 				}
 			}
 		}

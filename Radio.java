@@ -2,10 +2,12 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Radio implements RadioInterface{
-	private boolean tipo;
-	private boolean tipoFrecuencia;
-	private double estacion;
+	private boolean tipo = true;
+	private boolean tipoFrecuencia = true;
+	private double estacion = 88.1;
 	private int boton;
+	//private String[] [] canales = new String[3] [12];
+	private double [][] canales = new double [2][12];
 	
 	public Radio() {
 		
@@ -53,40 +55,59 @@ public class Radio implements RadioInterface{
 	@Override
 	public void cambioTipoFrecuencia(boolean tipo) {
 		
+		//si tipo es igual a true se encuentra en FM
 		if (tipo == true) {
 			setEstacion(88.1);
 		}
+		//si tipo es igual a False se encuentra en AM
 		if (tipo == false) {
 			setEstacion(540);
 		}
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void encender() {
-		JOptionPane.showMessageDialog(null, "La radio se ha encendido");
+		//JOptionPane.showMessageDialog(null, "La radio se ha encendido");
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void apagar() {
-		JOptionPane.showMessageDialog(null, "La radio se ha apagado");
+		//JOptionPane.showMessageDialog(null, "La radio se ha apagado");
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void guardarEstacion(double estacion, boolean tipoFrecuencia, int boton) {
-		// TODO Auto-generated method stub
+		// Metodo para guardar la estacion, la frecuencia y el canal en una matriz
+		//String [] datos = new String[3];
+		//datos[0] = String.valueOf(estacion); datos [1] = String.valueOf(tipoFrecuencia); datos[2] = String.valueOf(boton);
+		//for(int i = 0; i < 3; i++)
+		//{
+			//canales[i][boton] = datos[i];
+		//}
+		if(tipoFrecuencia == true)
+		{
+			canales[0][boton] = estacion;
+		}
+		else
+		{
+			canales[1][boton] = estacion;
+		}
 		
 	}
 
 	@Override
 	public double seleccionarEstacion(int boton, boolean tipoFrecuencia) {
-		// TODO Auto-generated method stub
-		return 0;
+		// devuelve la estacion dependiendo el boton y la estacion que desea
+		int frecuencia = 0;
+		if(tipoFrecuencia == true) 
+			frecuencia =0;
+		else 
+			frecuencia = 1;
+		return canales[frecuencia][boton];
 	}
 
 
