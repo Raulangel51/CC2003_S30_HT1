@@ -11,6 +11,7 @@
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentEvent;
 
 import javax.swing.JFrame;
 import javax.swing.JButton;
@@ -43,7 +44,10 @@ public class PrincipalGUI {
 	private JButton btnCanal_10;
 	private JButton btnCanal_11;
 	private JButton btnCanal_12;
+	private boolean on = false;
+	private boolean AM = true;
 	Radio radio = new Radio();
+	private JPanel panelRadio;
 	int cont = 0;
 	int cont1 = 0;
 	
@@ -75,100 +79,107 @@ public class PrincipalGUI {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 663, 366);
+		frame.setBounds(100, 100, 700, 321);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		button_atras = new JButton("<");
-		button_atras.setBounds(440, 28, 64, 25);
-		button_atras.addActionListener(action);
-		frame.getContentPane().add(button_atras);
-		
-		button_siguiente = new JButton(">");
-		button_siguiente.setBounds(516, 28, 70, 25);
-		button_siguiente.addActionListener(action);
-		frame.getContentPane().add(button_siguiente);
-		
-		btnSave = new JButton("Save");
-		btnSave.setBounds(516, 101, 97, 25);
-		btnSave.addActionListener(action);
-		frame.getContentPane().add(btnSave);
-		
-		btnCanal_1 = new JButton("Canal 1");
-		btnCanal_1.setBounds(150, 101, 81, 25);
-		btnCanal_1.addActionListener(action);
-		frame.getContentPane().add(btnCanal_1);
-		
-		btnCanal_2 = new JButton("Canal 2");
-		btnCanal_2.setBounds(238, 101, 81, 25);
-		btnCanal_2.addActionListener(action);
-		frame.getContentPane().add(btnCanal_2);
-		
-		btnCanal_3 = new JButton("Canal 3");
-		btnCanal_3.setBounds(331, 101, 81, 25);
-		btnCanal_3.addActionListener(action);
-		frame.getContentPane().add(btnCanal_3);
-		
-		btnCanal_4 = new JButton("Canal 4");
-		btnCanal_4.setBounds(424, 101, 80, 25);
-		btnCanal_4.addActionListener(action);
-		frame.getContentPane().add(btnCanal_4);
-		
-		btnOnOff = new JButton("ON / OFF");
-		btnOnOff.setBounds(12, 13, 97, 25);
-		btnOnOff.addActionListener(action);
-		frame.getContentPane().add(btnOnOff);
+		panelRadio = new JPanel();
+		panelRadio.setBounds(12, 13, 656, 249);
+		frame.getContentPane().add(panelRadio);
+		panelRadio.setLayout(null);
 		
 		btnAmFm = new JButton("AM / FM");
-		btnAmFm.setBounds(12, 82, 97, 25);
-		btnAmFm.addActionListener(action);
-		frame.getContentPane().add(btnAmFm);
+		btnAmFm.setBounds(26, 84, 97, 25);
+		panelRadio.add(btnAmFm);
 		
-		btnCanal_5 = new JButton("Canal 5");
-		btnCanal_5.setBounds(150, 144, 81, 25);
-		btnCanal_5.addActionListener(action);
-		frame.getContentPane().add(btnCanal_5);
-		
-		btnCanal_6 = new JButton("Canal 6");
-		btnCanal_6.setBounds(238, 144, 81, 25);
-		btnCanal_6.addActionListener(action);
-		frame.getContentPane().add(btnCanal_6);
-		
-		btnCanal_7 = new JButton("Canal 7");
-		btnCanal_7.setBounds(327, 144, 81, 25);
-		btnCanal_7.addActionListener(action);
-		frame.getContentPane().add(btnCanal_7);
-		
-		btnCanal_8 = new JButton("Canal 8");
-		btnCanal_8.setBounds(424, 144, 81, 25);
-		btnCanal_8.addActionListener(action);
-		frame.getContentPane().add(btnCanal_8);
-		
-		btnCanal_9 = new JButton("Canal 9");
-		btnCanal_9.setBounds(150, 188, 81, 25);
-		btnCanal_9.addActionListener(action);
-		frame.getContentPane().add(btnCanal_9);
-		
-		btnCanal_10 = new JButton("Canal 10");
-		btnCanal_10.setBounds(248, 188, 91, 25);
-		btnCanal_10.addActionListener(action);
-		frame.getContentPane().add(btnCanal_10);
-		
-		btnCanal_11 = new JButton("Canal 11");
-		btnCanal_11.setBounds(363, 188, 91, 25);
-		btnCanal_11.addActionListener(action);
-		frame.getContentPane().add(btnCanal_11);
-		
-		btnCanal_12 = new JButton("Canal 12");
-		btnCanal_12.setBounds(150, 238, 97, 25);
-		btnCanal_12.addActionListener(action);
-		frame.getContentPane().add(btnCanal_12);
+		btnOnOff = new JButton("ON / OFF");
+		btnOnOff.setBounds(26, 15, 97, 25);
+		panelRadio.add(btnOnOff);
 		
 		textField = new JTextField();
+		textField.setBounds(164, 31, 224, 40);
+		panelRadio.add(textField);
 		textField.setEditable(false);
-		textField.setBounds(150, 29, 224, 40);
-		frame.getContentPane().add(textField);
 		textField.setColumns(10);
+		
+		button_atras = new JButton("<");
+		button_atras.setBounds(454, 30, 64, 25);
+		panelRadio.add(button_atras);
+		
+		btnSave = new JButton("Save");
+		btnSave.setBounds(530, 103, 97, 25);
+		panelRadio.add(btnSave);
+		
+		button_siguiente = new JButton(">");
+		button_siguiente.setBounds(530, 30, 70, 25);
+		panelRadio.add(button_siguiente);
+		
+		btnCanal_4 = new JButton("Canal 4");
+		btnCanal_4.setBounds(365, 124, 97, 25);
+		panelRadio.add(btnCanal_4);
+		
+		btnCanal_8 = new JButton("Canal 8");
+		btnCanal_8.setBounds(365, 167, 97, 25);
+		panelRadio.add(btnCanal_8);
+		
+		btnCanal_12 = new JButton("Canal 12");
+		btnCanal_12.setBounds(365, 211, 97, 25);
+		panelRadio.add(btnCanal_12);
+		
+		btnCanal_11 = new JButton("Canal 11");
+		btnCanal_11.setBounds(262, 211, 91, 25);
+		panelRadio.add(btnCanal_11);
+		
+		btnCanal_7 = new JButton("Canal 7");
+		btnCanal_7.setBounds(258, 167, 95, 25);
+		panelRadio.add(btnCanal_7);
+		
+		btnCanal_3 = new JButton("Canal 3");
+		btnCanal_3.setBounds(262, 124, 91, 25);
+		panelRadio.add(btnCanal_3);
+		
+		btnCanal_2 = new JButton("Canal 2");
+		btnCanal_2.setBounds(155, 124, 91, 25);
+		panelRadio.add(btnCanal_2);
+		
+		btnCanal_6 = new JButton("Canal 6");
+		btnCanal_6.setBounds(155, 167, 91, 25);
+		panelRadio.add(btnCanal_6);
+		
+		btnCanal_10 = new JButton("Canal 10");
+		btnCanal_10.setBounds(155, 211, 91, 25);
+		panelRadio.add(btnCanal_10);
+		
+		btnCanal_9 = new JButton("Canal 9");
+		btnCanal_9.setBounds(46, 211, 97, 25);
+		panelRadio.add(btnCanal_9);
+		
+		btnCanal_5 = new JButton("Canal 5");
+		btnCanal_5.setBounds(46, 167, 97, 25);
+		panelRadio.add(btnCanal_5);
+		
+		btnCanal_1 = new JButton("Canal 1");
+		btnCanal_1.setBounds(46, 124, 97, 25);
+		panelRadio.add(btnCanal_1);
+		btnCanal_1.addActionListener(action);
+		btnCanal_5.addActionListener(action);
+		btnCanal_9.addActionListener(action);
+		btnCanal_10.addActionListener(action);
+		btnCanal_6.addActionListener(action);
+		btnCanal_2.addActionListener(action);
+		btnCanal_3.addActionListener(action);
+		btnCanal_7.addActionListener(action);
+		btnCanal_11.addActionListener(action);
+		btnCanal_12.addActionListener(action);
+		btnCanal_8.addActionListener(action);
+		btnCanal_4.addActionListener(action);
+		button_siguiente.addActionListener(action);
+		btnSave.addActionListener(action);
+		button_atras.addActionListener(action);
+		btnOnOff.addActionListener(action);
+		btnAmFm.addActionListener(action);
+		
+		
 	}
 	
 	public class Milistener implements ActionListener
@@ -254,12 +265,23 @@ public class PrincipalGUI {
 			if(e.getSource() == btnOnOff)
 			{
 				cont1++;
-				if (cont1 == 1) {
+				if (cont1 == 1) 
+				{
 					radio.apagar();
+					for(java.awt.Component component : panelRadio.getComponents())
+					{
+						component.setEnabled(false);
+					}
+					btnOnOff.setEnabled(true);
 				}
-				if (cont1 == 2) {
+				if (cont1 == 2) 
+				{
 					radio.encender();
 					cont1 = 0;
+					for (java.awt.Component componente : panelRadio.getComponents()) 
+					{
+						componente.setEnabled(true);
+					}
 				}
 
 			}
