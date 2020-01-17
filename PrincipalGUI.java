@@ -15,6 +15,11 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import javax.swing.JEditorPane;
+import javax.swing.JPanel;
+import javax.swing.JInternalFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 
 public class PrincipalGUI {
 
@@ -40,6 +45,7 @@ public class PrincipalGUI {
 	private JButton btnCanal_12;
 	Radio radio = new Radio();
 	int cont = 0;
+	int cont1 = 0;
 	
 	/**
 	 * Launch the application.
@@ -231,12 +237,13 @@ public class PrincipalGUI {
 
 			if(e.getSource() == button_atras)
 			{
-
+				radio.setTipo(false);
 			}
 
 			if(e.getSource() == button_siguiente)
 			{
-
+				radio.setTipo(true);
+				radio.cambioEstacion(radio.isTipo(), radio.isTipoFrecuencia());
 			}
 
 			if ( e.getSource() == btnSave)
@@ -246,7 +253,14 @@ public class PrincipalGUI {
 
 			if(e.getSource() == btnOnOff)
 			{
-				
+				cont1++;
+				if (cont1 == 1) {
+					radio.apagar();
+				}
+				if (cont1 == 2) {
+					radio.encender();
+					cont1 = 0;
+				}
 
 			}
 			if(e.getSource() == btnAmFm)
@@ -254,16 +268,19 @@ public class PrincipalGUI {
 				
 				cont++;
 				if (cont == 1) {
-					boolean tipo = false;
-					radio.cambioTipoFrecuencia(tipo);
+					radio.setTipoFrecuencia(false);
+					JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: AM");
+					radio.cambioTipoFrecuencia(radio.isTipoFrecuencia());
 				}
 				if (cont == 2) {
-					boolean tipo = true;
+					radio.setTipoFrecuencia(true);
+					JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: PM");
 					cont = 0;
-					radio.cambioTipoFrecuencia(tipo);
+					radio.cambioTipoFrecuencia(radio.isTipoFrecuencia());
 				}
 			}
 		}
 	}
 }
+
 
