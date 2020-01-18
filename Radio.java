@@ -9,7 +9,7 @@
  * Clase Inteface del radio
  *	donde se encunetran todos los metodos que puede realizar
  */
-public interface RadioInterface {
+public interface Radio {
 	//cambio de frecuencia ejemplo: 99.9 al 100.0
 	public void cambioEstacion(boolean tipo, boolean tipoFrecuencia);
 
