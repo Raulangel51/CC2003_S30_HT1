@@ -47,7 +47,7 @@ public class PrincipalGUI {
 	private JButton btnCanal_12;
 	private boolean on = false;
 	private boolean AM = true;
-	Radio radio = new Radio();
+	Controlador radio = new Controlador();
 	private JPanel panelRadio;
 	int cont = 0;
 	int cont1 = 0;
@@ -209,7 +209,7 @@ public class PrincipalGUI {
 			if (e.getSource()==btnCanal_2)
 			{
 				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(1, radio.isTipoFrecuencia()));
+				radio.setEstacion(radio.seleccionarEstacion(1, radio.isTipoFrecuencia()));
 				if(radio.getEstacion() != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
