@@ -1,4 +1,5 @@
 /**
+ /**
  *  @author Raul Angel Jimenez Hernandez 
  * 	19017
  * @author Donaldo Sebastian Garcia Jimenez
@@ -265,7 +266,7 @@ public class PrincipalGUI {
 			if(e.getSource() == button_atras)
 			{
 				radio.setTipo(false);
-				
+				radio.cambioEstacion(radio.isTipo(), radio.isTipoFrecuencia());
 				txtEstacion.setText(String.valueOf(radio.getEstacion()));
 			}
 
@@ -286,7 +287,7 @@ public class PrincipalGUI {
 						canales[i] = String.valueOf(i+1);
 					}
 					JFrame frame = new JFrame("Canal de guardado");
-					String canale = (String) JOptionPane.showInputDialog(frame, "¿Canal en que desea guardar la estacion?", "Guarda", JOptionPane.QUESTION_MESSAGE, null, canales, canales[0]);
+					String canale = (String) JOptionPane.showInputDialog(frame, "Â¿Canal en que desea guardar la estacion?", "Guarda", JOptionPane.QUESTION_MESSAGE, null, canales, canales[0]);
 					int canal = Integer.parseInt(canale);
 					radio.guardarEstacion(radio.getEstacion(), radio.isTipoFrecuencia(), (canal-1) );
 				}
