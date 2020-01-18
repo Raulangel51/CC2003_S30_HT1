@@ -192,75 +192,194 @@ public class PrincipalGUI {
 		{
 			if(e.getSource() == btnCanal_1)
 			{
+				double estacion = radio.getEstacion();
 				radio .setEstacion(radio.seleccionarEstacion(0, radio.isTipoFrecuencia()));
-				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
-
+				if(radio.getEstacion() != 0.0)
+				{
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					radio.setEstacion(estacion);
+					txtEstacion.setText(String.format("%.1f", estacion));
+				}
 			}
 
 			if (e.getSource()==btnCanal_2)
 			{
+				double estacion = radio.getEstacion();
 				radio .setEstacion(radio.seleccionarEstacion(1, radio.isTipoFrecuencia()));
-				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				if(radio.getEstacion() != 0.0)
+				{
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					radio.setEstacion(estacion);
+					txtEstacion.setText(String.format("%.1f", estacion));
+				}
 			}
 
 			if(e.getSource() == btnCanal_3)
 			{
+				double estacion = radio.getEstacion();
 				radio .setEstacion(radio.seleccionarEstacion(2, radio.isTipoFrecuencia()));
-				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				if(radio.getEstacion() != 0.0)
+				{
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					radio.setEstacion(estacion);
+					txtEstacion.setText(String.format("%.1f", estacion));
+				}
 			}
 
 			if (e.getSource() == btnCanal_4)
 			{
+				double estacion = radio.getEstacion();
 				radio .setEstacion(radio.seleccionarEstacion(3, radio.isTipoFrecuencia()));
-				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				if(radio.getEstacion() != 0.0)
+				{
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					radio.setEstacion(estacion);
+					txtEstacion.setText(String.format("%.1f", estacion));
+				}
 			}
 
 			if ( e.getSource() == btnCanal_5)
 			{
+				double estacion = radio.getEstacion();
 				radio .setEstacion(radio.seleccionarEstacion(4, radio.isTipoFrecuencia()));
-				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				if(radio.getEstacion() != 0.0)
+				{
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					radio.setEstacion(estacion);
+					txtEstacion.setText(String.format("%.1f", estacion));
+				}
 			}
 
 			if(e.getSource() == btnCanal_6)
 			{
+				double estacion = radio.getEstacion();
 				radio .setEstacion(radio.seleccionarEstacion(5, radio.isTipoFrecuencia()));
-				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				if(radio.getEstacion() != 0.0)
+				{
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					radio.setEstacion(estacion);
+					txtEstacion.setText(String.format("%.1f", estacion));
+				}
 			}
 
 			if(e.getSource() == btnCanal_7)
 			{
+				double estacion = radio.getEstacion();
 				radio .setEstacion(radio.seleccionarEstacion(6, radio.isTipoFrecuencia()));
-				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				if(radio.getEstacion() != 0.0)
+				{
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					radio.setEstacion(estacion);
+					txtEstacion.setText(String.format("%.1f", estacion));
+				}
 			}
 
 			if(e.getSource() == btnCanal_8)
 			{
+				double estacion = radio.getEstacion();
 				radio .setEstacion(radio.seleccionarEstacion(7, radio.isTipoFrecuencia()));
-				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				if(radio.getEstacion() != 0.0)
+				{
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					radio.setEstacion(estacion);
+					txtEstacion.setText(String.format("%.1f", estacion));
+				}
 			}
 
 			if(e.getSource() == btnCanal_9)
 			{
+				double estacion = radio.getEstacion();
 				radio .setEstacion(radio.seleccionarEstacion(8, radio.isTipoFrecuencia()));
-				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				if(radio.getEstacion() != 0.0)
+				{
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					radio.setEstacion(estacion);
+					txtEstacion.setText(String.format("%.1f", estacion));
+				}
 			}
 
 			if(e.getSource() == btnCanal_10)
 			{
+				double estacion = radio.getEstacion();
 				radio .setEstacion(radio.seleccionarEstacion(9, radio.isTipoFrecuencia()));
-				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				if(radio.getEstacion() != 0.0)
+				{
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					radio.setEstacion(estacion);
+					txtEstacion.setText(String.format("%.1f", estacion));
+				}
 			}
 
 			if(e.getSource() == btnCanal_11)
 			{
+				double estacion = radio.getEstacion();
 				radio .setEstacion(radio.seleccionarEstacion(10, radio.isTipoFrecuencia()));
-				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				if(radio.getEstacion() != 0.0)
+				{
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					radio.setEstacion(estacion);
+					txtEstacion.setText(String.format("%.1f", estacion));
+				}
 			}
 
 			if(e.getSource() == btnCanal_12)
 			{
+				double estacion = radio.getEstacion();
 				radio .setEstacion(radio.seleccionarEstacion(11, radio.isTipoFrecuencia()));
-				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				if(radio.getEstacion() != 0.0)
+				{
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					radio.setEstacion(estacion);
+					txtEstacion.setText(String.format("%.1f", estacion));
+				}
 			}
 
 			if(e.getSource() == button_atras)
