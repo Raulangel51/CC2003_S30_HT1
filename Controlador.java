@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-public class Radio implements RadioInterface{
+public class Controlador implements Radio{
 	private boolean tipo = true;
 	private boolean tipoFrecuencia = true;
 	private double estacion = 88.1;
@@ -9,7 +9,7 @@ public class Radio implements RadioInterface{
 	//private String[] [] canales = new String[3] [12];
 	private double [][] canales = new double [2][12];
 	
-	public Radio() {
+	public Controlador() {
 		
 	}
 	
