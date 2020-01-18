@@ -47,7 +47,7 @@ public class PrincipalGUI {
 	private JButton btnCanal_12;
 	private boolean on = false;
 	private boolean AM = true;
-	Radio radio = new Radio();
+	Controlador radio = new Controlador();
 	private JPanel panelRadio;
 	int cont = 0;
 	int cont1 = 0;
