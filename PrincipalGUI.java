@@ -80,88 +80,88 @@ public class PrincipalGUI {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 700, 321);
+		frame.setBounds(100, 100, 634, 321);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		panelRadio = new JPanel();
-		panelRadio.setBounds(12, 13, 656, 249);
+		panelRadio.setBounds(12, 13, 596, 248);
 		frame.getContentPane().add(panelRadio);
 		panelRadio.setLayout(null);
 		
 		btnAmFm = new JButton("AM / FM");
-		btnAmFm.setBounds(26, 84, 97, 25);
+		btnAmFm.setBounds(25, 82, 97, 25);
 		panelRadio.add(btnAmFm);
 		
 		btnOnOff = new JButton("ON / OFF");
-		btnOnOff.setBounds(26, 15, 97, 25);
+		btnOnOff.setBounds(25, 13, 97, 25);
 		panelRadio.add(btnOnOff);
 		
 		txtEstacion = new JTextField();
-		txtEstacion.setBounds(164, 31, 224, 40);
+		txtEstacion.setBounds(143, 31, 224, 40);
 		panelRadio.add(txtEstacion);
 		txtEstacion.setEditable(false);
 		txtEstacion.setColumns(10);
 		txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 		
 		button_atras = new JButton("<");
-		button_atras.setBounds(454, 30, 64, 25);
+		button_atras.setBounds(433, 30, 64, 25);
 		panelRadio.add(button_atras);
 		
 		btnSave = new JButton("Save");
-		btnSave.setBounds(486, 124, 97, 25);
+		btnSave.setBounds(465, 124, 97, 25);
 		panelRadio.add(btnSave);
 		
 		button_siguiente = new JButton(">");
-		button_siguiente.setBounds(530, 30, 70, 25);
+		button_siguiente.setBounds(509, 30, 70, 25);
 		panelRadio.add(button_siguiente);
 		
 		btnCanal_4 = new JButton("Canal 4");
-		btnCanal_4.setBounds(365, 124, 97, 25);
+		btnCanal_4.setBounds(344, 124, 97, 25);
 		panelRadio.add(btnCanal_4);
 		
 		btnCanal_8 = new JButton("Canal 8");
-		btnCanal_8.setBounds(365, 167, 97, 25);
+		btnCanal_8.setBounds(344, 167, 97, 25);
 		panelRadio.add(btnCanal_8);
 		
 		btnCanal_12 = new JButton("Canal 12");
-		btnCanal_12.setBounds(365, 211, 97, 25);
+		btnCanal_12.setBounds(344, 211, 97, 25);
 		panelRadio.add(btnCanal_12);
 		
 		btnCanal_11 = new JButton("Canal 11");
-		btnCanal_11.setBounds(262, 211, 91, 25);
+		btnCanal_11.setBounds(241, 211, 91, 25);
 		panelRadio.add(btnCanal_11);
 		
 		btnCanal_7 = new JButton("Canal 7");
-		btnCanal_7.setBounds(258, 167, 95, 25);
+		btnCanal_7.setBounds(237, 167, 95, 25);
 		panelRadio.add(btnCanal_7);
 		
 		btnCanal_3 = new JButton("Canal 3");
-		btnCanal_3.setBounds(262, 124, 91, 25);
+		btnCanal_3.setBounds(241, 124, 91, 25);
 		panelRadio.add(btnCanal_3);
 		
 		btnCanal_2 = new JButton("Canal 2");
-		btnCanal_2.setBounds(155, 124, 91, 25);
+		btnCanal_2.setBounds(134, 124, 91, 25);
 		panelRadio.add(btnCanal_2);
 		
 		btnCanal_6 = new JButton("Canal 6");
-		btnCanal_6.setBounds(155, 167, 91, 25);
+		btnCanal_6.setBounds(134, 167, 91, 25);
 		panelRadio.add(btnCanal_6);
 		
 		btnCanal_10 = new JButton("Canal 10");
-		btnCanal_10.setBounds(155, 211, 91, 25);
+		btnCanal_10.setBounds(134, 211, 91, 25);
 		panelRadio.add(btnCanal_10);
 		
 		btnCanal_9 = new JButton("Canal 9");
-		btnCanal_9.setBounds(46, 211, 97, 25);
+		btnCanal_9.setBounds(25, 211, 97, 25);
 		panelRadio.add(btnCanal_9);
 		
 		btnCanal_5 = new JButton("Canal 5");
-		btnCanal_5.setBounds(46, 167, 97, 25);
+		btnCanal_5.setBounds(25, 167, 97, 25);
 		panelRadio.add(btnCanal_5);
 		
 		btnCanal_1 = new JButton("Canal 1");
-		btnCanal_1.setBounds(46, 124, 97, 25);
+		btnCanal_1.setBounds(25, 124, 97, 25);
 		panelRadio.add(btnCanal_1);
 		btnCanal_1.addActionListener(action);
 		btnCanal_5.addActionListener(action);
