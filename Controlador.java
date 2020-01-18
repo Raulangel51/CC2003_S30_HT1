@@ -14,22 +14,22 @@ public class Controlador implements Radio{
 	}
 	
 
-	@Override
+		@Override
 	public void cambioEstacion(boolean tipo, boolean tipoFrecuencia) {
 		// TODO Auto-generated method stub
 		if (tipoFrecuencia == true) {
 			if (tipo == true) {
-				if (this.getEstacion() == 107.9) {
+				if (Double.parseDouble(String.format("%.1f", this.getEstacion())) == 107.9) {
 					this.setEstacion(87.9);
 				}
-				double a = this.getEstacion() + 0.2;
+				double a = Double.parseDouble(String.format("%.1f", this.getEstacion())) + 0.2;
 				this.setEstacion(a);
 			}
 			if (tipo == false) {
-				if (this.getEstacion() == 87.9) {
+				if (Double.parseDouble(String.format("%.1f", this.getEstacion())) == 87.9) {
 					this.setEstacion(107.9);
 				}
-				double a = this.getEstacion() - 0.2;
+				double a = Double.parseDouble(String.format("%.1f", this.getEstacion())) - 0.2;
 				this.setEstacion(a);
 			}
 		}
