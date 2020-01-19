@@ -14,7 +14,7 @@ class PruebaCambioEstacion {
 		Controlador test = new Controlador();
 		test.cambioEstacion(true, true);
 		double resultado = test.getEstacion();
-		assertEquals(88.3, resultado);
+		assertEquals(88.5, resultado);
 	}
 
 }

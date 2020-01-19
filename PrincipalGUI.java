@@ -200,7 +200,7 @@ public class PrincipalGUI {
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
 					radio.setEstacion(estacion);
 					txtEstacion.setText(String.format("%.1f", estacion));
 				}
@@ -216,7 +216,7 @@ public class PrincipalGUI {
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
 					radio.setEstacion(estacion);
 					txtEstacion.setText(String.format("%.1f", estacion));
 				}
@@ -232,7 +232,7 @@ public class PrincipalGUI {
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
 					radio.setEstacion(estacion);
 					txtEstacion.setText(String.format("%.1f", estacion));
 				}
@@ -248,7 +248,7 @@ public class PrincipalGUI {
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
 					radio.setEstacion(estacion);
 					txtEstacion.setText(String.format("%.1f", estacion));
 				}
@@ -264,7 +264,7 @@ public class PrincipalGUI {
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
 					radio.setEstacion(estacion);
 					txtEstacion.setText(String.format("%.1f", estacion));
 				}
@@ -280,7 +280,7 @@ public class PrincipalGUI {
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
 					radio.setEstacion(estacion);
 					txtEstacion.setText(String.format("%.1f", estacion));
 				}
@@ -296,7 +296,7 @@ public class PrincipalGUI {
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
 					radio.setEstacion(estacion);
 					txtEstacion.setText(String.format("%.1f", estacion));
 				}
@@ -312,7 +312,7 @@ public class PrincipalGUI {
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
 					radio.setEstacion(estacion);
 					txtEstacion.setText(String.format("%.1f", estacion));
 				}
@@ -328,7 +328,7 @@ public class PrincipalGUI {
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
 					radio.setEstacion(estacion);
 					txtEstacion.setText(String.format("%.1f", estacion));
 				}
@@ -344,7 +344,7 @@ public class PrincipalGUI {
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
 					radio.setEstacion(estacion);
 					txtEstacion.setText(String.format("%.1f", estacion));
 				}
@@ -360,7 +360,7 @@ public class PrincipalGUI {
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
 					radio.setEstacion(estacion);
 					txtEstacion.setText(String.format("%.1f", estacion));
 				}
@@ -376,7 +376,7 @@ public class PrincipalGUI {
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "El canal que eligio esta vacio.");
+					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
 					radio.setEstacion(estacion);
 					txtEstacion.setText(String.format("%.1f", estacion));
 				}
