@@ -11,20 +11,28 @@
  */
 public interface Radio {
 	//cambio de frecuencia ejemplo: 99.9 al 100.0
-	public void cambioEstacion(boolean tipo, boolean tipoFrecuencia);
+	public double cambioEstacion(boolean subirBajar, boolean tipoFrecuencia);
 
 	//cambio de AM a FM
-	public void cambioTipoFrecuencia(boolean tipo);
+	public boolean cambioTipoFrecuencia(boolean tipo); //tipo es el tipo frecuencia
 
 	//Encender radio
-	public void encender();
-	public void apagar();
+	public boolean encenderApagar(boolean estado);
 
 	//guardar una estacion en un boton
 	public void guardarEstacion(double estacion, boolean tipoFrecuencia, int boton);
 
 	//seleccionar una estacion guardada
 	public double seleccionarEstacion(int boton, boolean tipoFrecuencia);
+	
+	//devuelve la estacion actual
+	public double getEstacion();
+	
+	//devuelve si es AM o FM
+	public boolean getTipoFrecuencia();
+	
+	//devuelve el estado del radio on o off
+	public boolean getEstado();	
 		
 	
 }

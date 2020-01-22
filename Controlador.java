@@ -17,7 +17,7 @@ public class Controlador implements Radio{
 	 * @param tipo(true si pasa a la siguiente y false a la anterior), tipoFrecuencia(true si esta en FM y false si esta en AM)
 	 */
 		@Override
-	public void cambioEstacion(boolean tipo, boolean tipoFrecuencia) {
+	public double cambioEstacion(boolean tipo, boolean tipoFrecuencia) {
 		// Metodo para pasar a la siguiente estacion, dependiendo la Frecuencia AM o FM
 			//Frecuencia AM
 		if(on)//verifica que el radio este encendido
@@ -56,6 +56,7 @@ public class Controlador implements Radio{
 				}
 			}
 		}
+		return estacion;
 		
 	}
 
@@ -64,7 +65,7 @@ public class Controlador implements Radio{
 		 * @param tipo, true si es FM y false si es AM
 		 */
 	@Override
-	public void cambioTipoFrecuencia(boolean tipo) {
+	public boolean cambioTipoFrecuencia(boolean tipo) {
 		
 		if(on)//verifica que el radio este encendido
 		{
@@ -77,24 +78,26 @@ public class Controlador implements Radio{
 				setEstacion(540);
 			}
 		}
+		
+		return tipoFrecuencia;
 	}
 
 	/**
 	 * Enciende el radio, activa las funciones
 	 */
 	@Override
-	public void encender() {
-		//Se cambia la variable booleana de encendido
-		on = true;		
-	}
-
-	/**
-	 * Apaga el radio, no permite que funcione
-	 */
-	@Override
-	public void apagar() {
-		//Se cambia la variable booleana de encnedod a apagado
-		on = false;		
+	public boolean encenderApagar(boolean estado)
+	{
+		if(on)
+		{
+			on = false;
+		}
+		else
+		{
+			on = true;
+		}
+		
+		return on;
 	}
 
 	/**
@@ -141,15 +144,31 @@ public class Controlador implements Radio{
 			return 0;
 		}
 	}
-
-
+	
 	/**
-	 * Get de la variable tipo, si quiere pasar a la sigueinte cancion o a la anterior
-	 * @return true or false,
+	 * getEstacion devuelve la estacion actual del radio
 	 */
-	public boolean isTipo() {
-		return tipo;
+	public double getEstacion()
+	{
+		return estacion;
 	}
+	
+	/**
+	 * get tipoFrecuencia devuelve si esta en AM o FM
+	 */
+	public boolean getTipoFrecuencia()
+	{
+		return tipoFrecuencia;
+	}
+	
+	/**
+	 * getEstado devuelve si el radio esta on o off
+	 */
+	public boolean getEstado()
+	{
+		return on;
+	}
+
 
 	/**
 	 * Set de tipo, indicador para pasar a la siguiente cancion o a la anterior
@@ -158,29 +177,14 @@ public class Controlador implements Radio{
 	public void setTipo(boolean tipo) {
 		this.tipo = tipo;
 	}
-
-	/**
-	 * Muestra la frecuencia en la que se encuentra el radio
-	 * @return true si esta en FM o false si esta en AM
-	 */
-	public boolean isTipoFrecuencia() {
-		return tipoFrecuencia;
-	}
-
+	
+	
 	/**
 	 * Cambia la frecuencia de la radio
 	 * @param tipoFrecuencia, true si esta en FM o false si esta en AM
 	 */
 	public void setTipoFrecuencia(boolean tipoFrecuencia) {
 		this.tipoFrecuencia = tipoFrecuencia;
-	}
-
-	/**
-	 * Gaurda la estacion que esta actualemente en el radio
-	 * @return estacion, la estacion actual
-	 */
-	public double getEstacion() {
-		return estacion;
 	}
 
 	/**

@@ -193,7 +193,7 @@ public class PrincipalGUI {
 			if(e.getSource() == btnCanal_1)
 			{
 				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(0, radio.isTipoFrecuencia()));
+				radio .setEstacion(radio.seleccionarEstacion(0, radio.getTipoFrecuencia()));
 				if(radio.getEstacion() != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
@@ -209,7 +209,7 @@ public class PrincipalGUI {
 			if (e.getSource()==btnCanal_2)
 			{
 				double estacion = radio.getEstacion();
-				radio.setEstacion(radio.seleccionarEstacion(1, radio.isTipoFrecuencia()));
+				radio.setEstacion(radio.seleccionarEstacion(1, radio.getTipoFrecuencia()));
 				if(radio.getEstacion() != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
@@ -225,7 +225,7 @@ public class PrincipalGUI {
 			if(e.getSource() == btnCanal_3)
 			{
 				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(2, radio.isTipoFrecuencia()));
+				radio .setEstacion(radio.seleccionarEstacion(2, radio.getTipoFrecuencia()));
 				if(radio.getEstacion() != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
@@ -241,7 +241,7 @@ public class PrincipalGUI {
 			if (e.getSource() == btnCanal_4)
 			{
 				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(3, radio.isTipoFrecuencia()));
+				radio .setEstacion(radio.seleccionarEstacion(3, radio.getTipoFrecuencia()));
 				if(radio.getEstacion() != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
@@ -257,7 +257,7 @@ public class PrincipalGUI {
 			if ( e.getSource() == btnCanal_5)
 			{
 				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(4, radio.isTipoFrecuencia()));
+				radio .setEstacion(radio.seleccionarEstacion(4, radio.getTipoFrecuencia()));
 				if(radio.getEstacion() != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
@@ -273,7 +273,7 @@ public class PrincipalGUI {
 			if(e.getSource() == btnCanal_6)
 			{
 				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(5, radio.isTipoFrecuencia()));
+				radio .setEstacion(radio.seleccionarEstacion(5, radio.getTipoFrecuencia()));
 				if(radio.getEstacion() != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
@@ -289,7 +289,7 @@ public class PrincipalGUI {
 			if(e.getSource() == btnCanal_7)
 			{
 				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(6, radio.isTipoFrecuencia()));
+				radio .setEstacion(radio.seleccionarEstacion(6, radio.getTipoFrecuencia()));
 				if(radio.getEstacion() != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
@@ -305,7 +305,7 @@ public class PrincipalGUI {
 			if(e.getSource() == btnCanal_8)
 			{
 				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(7, radio.isTipoFrecuencia()));
+				radio .setEstacion(radio.seleccionarEstacion(7, radio.getTipoFrecuencia()));
 				if(radio.getEstacion() != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
@@ -321,7 +321,7 @@ public class PrincipalGUI {
 			if(e.getSource() == btnCanal_9)
 			{
 				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(8, radio.isTipoFrecuencia()));
+				radio .setEstacion(radio.seleccionarEstacion(8, radio.getTipoFrecuencia()));
 				if(radio.getEstacion() != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
@@ -337,7 +337,7 @@ public class PrincipalGUI {
 			if(e.getSource() == btnCanal_10)
 			{
 				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(9, radio.isTipoFrecuencia()));
+				radio .setEstacion(radio.seleccionarEstacion(9, radio.getTipoFrecuencia()));
 				if(radio.getEstacion() != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
@@ -353,7 +353,7 @@ public class PrincipalGUI {
 			if(e.getSource() == btnCanal_11)
 			{
 				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(10, radio.isTipoFrecuencia()));
+				radio .setEstacion(radio.seleccionarEstacion(10, radio.getTipoFrecuencia()));
 				if(radio.getEstacion() != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
@@ -369,7 +369,7 @@ public class PrincipalGUI {
 			if(e.getSource() == btnCanal_12)
 			{
 				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(11, radio.isTipoFrecuencia()));
+				radio .setEstacion(radio.seleccionarEstacion(11, radio.getTipoFrecuencia()));
 				if(radio.getEstacion() != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
@@ -385,14 +385,14 @@ public class PrincipalGUI {
 			if(e.getSource() == button_atras)
 			{
 				radio.setTipo(false);
-				radio.cambioEstacion(radio.isTipo(), radio.isTipoFrecuencia());
+				radio.cambioEstacion(false, radio.getTipoFrecuencia());
 				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 			}
 
 			if(e.getSource() == button_siguiente)
 			{
 				radio.setTipo(true);
-				radio.cambioEstacion(radio.isTipo(), radio.isTipoFrecuencia());
+				radio.cambioEstacion(true, radio.getTipoFrecuencia());
 				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				
 			}
@@ -409,7 +409,7 @@ public class PrincipalGUI {
 					JFrame frame = new JFrame("Canal de guardado");
 					String canale = (String) JOptionPane.showInputDialog(frame, "¿Canal en que desea guardar la estacion?", "Guarda", JOptionPane.QUESTION_MESSAGE, null, canales, canales[0]);
 					int canal = Integer.parseInt(canale);
-					radio.guardarEstacion(radio.getEstacion(), radio.isTipoFrecuencia(), (canal-1) );
+					radio.guardarEstacion(radio.getEstacion(), radio.getTipoFrecuencia(), (canal-1) );
 				}
 				catch(Exception e1)
 				{
@@ -422,7 +422,7 @@ public class PrincipalGUI {
 				cont1++;
 				if (cont1 == 1) 
 				{
-					radio.apagar();
+					radio.encenderApagar(radio.getEstado());
 					for(java.awt.Component component : panelRadio.getComponents())
 					{
 						component.setEnabled(false);
@@ -433,7 +433,7 @@ public class PrincipalGUI {
 				}
 				if (cont1 == 2) 
 				{
-					radio.encender();
+					radio.encenderApagar(radio.getEstado());
 					cont1 = 0;
 					for (java.awt.Component componente : panelRadio.getComponents()) 
 					{
@@ -451,14 +451,14 @@ public class PrincipalGUI {
 				if (cont == 1) {
 					radio.setTipoFrecuencia(false);
 					JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: AM");
-					radio.cambioTipoFrecuencia(radio.isTipoFrecuencia());
+					radio.cambioTipoFrecuencia(radio.getTipoFrecuencia());
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 				if (cont == 2) {
 					radio.setTipoFrecuencia(true);
 					JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: FM");
 					cont = 0;
-					radio.cambioTipoFrecuencia(radio.isTipoFrecuencia());
+					radio.cambioTipoFrecuencia(radio.getTipoFrecuencia());
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 			}
