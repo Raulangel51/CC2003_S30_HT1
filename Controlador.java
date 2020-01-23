@@ -20,8 +20,8 @@ public class Controlador implements Radio{
 	public double cambioEstacion(boolean tipo, boolean tipoFrecuencia) {
 		// Metodo para pasar a la siguiente estacion, dependiendo la Frecuencia AM o FM
 			//Frecuencia AM
-		if(on)//verifica que el radio este encendido
-		{
+		//if(on)//verifica que el radio este encendido
+		//{
 			if (tipoFrecuencia == true) {
 				if (tipo == true) {
 					if (Double.parseDouble(String.format("%.1f", this.getEstacion())) == 107.9) {
@@ -55,7 +55,7 @@ public class Controlador implements Radio{
 					this.setEstacion(a);
 				}
 			}
-		}
+		//}
 		return estacion;
 		
 	}
@@ -67,8 +67,8 @@ public class Controlador implements Radio{
 	@Override
 	public boolean cambioTipoFrecuencia(boolean tipo) {
 		
-		if(on)//verifica que el radio este encendido
-		{
+		//if(on)//verifica que el radio este encendido
+		//{
 			//si tipo es igual a true se encuentra en FM
 			if (tipo == true) {
 				setEstacion(88.1);
@@ -77,7 +77,7 @@ public class Controlador implements Radio{
 			if (tipo == false) {
 				setEstacion(540);
 			}
-		}
+		//}
 		
 		return tipoFrecuencia;
 	}
@@ -88,7 +88,7 @@ public class Controlador implements Radio{
 	@Override
 	public boolean encenderApagar(boolean estado)
 	{
-		if(on)
+		if(on == true)
 		{
 			on = false;
 		}
@@ -106,8 +106,8 @@ public class Controlador implements Radio{
 	 */
 	@Override
 	public void guardarEstacion(double estacion, boolean tipoFrecuencia, int boton) {
-		if(on)//verifica que el radio este encendido
-		{
+		//if(on)//verifica que el radio este encendido
+		//{
 			//Guarda la estacion en la lista de FM
 			if(tipoFrecuencia == true)
 			{
@@ -118,7 +118,7 @@ public class Controlador implements Radio{
 			{
 				canales[1][boton] = estacion;
 			}
-		}
+		//}
 		
 	}
 
@@ -128,9 +128,9 @@ public class Controlador implements Radio{
 	 * @return la frecuancia guardad en los canales
 	 */
 	@Override
-	public double seleccionarEstacion(int boton, boolean tipoFrecuencia) {
-		if(on)//verifica que el radio este encendido
-		{
+	public double seleccionarEstacion(boolean tipoFrecuencia, int boton) {
+		//if(on == true)//verifica que el radio este encendido
+		//{
 			// devuelve la estacion dependiendo el boton y la estacion que desea
 			int frecuencia = 0;
 			if(tipoFrecuencia == true) 
@@ -138,11 +138,11 @@ public class Controlador implements Radio{
 			else 
 				frecuencia = 1;
 			return canales[frecuencia][boton];
-		}
-		else 
-		{
-			return 0;
-		}
+		//}
+		//else 
+		//{
+			//return 0;
+		//}
 	}
 	
 	/**

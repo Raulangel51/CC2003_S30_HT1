@@ -23,7 +23,7 @@ public interface Radio {
 	public void guardarEstacion(double estacion, boolean tipoFrecuencia, int boton);
 
 	//seleccionar una estacion guardada
-	public double seleccionarEstacion(int boton, boolean tipoFrecuencia);
+	public double seleccionarEstacion(boolean tipoFrecuencia, int boton);
 	
 	//devuelve la estacion actual
 	public double getEstacion();
