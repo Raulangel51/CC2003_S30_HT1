@@ -384,14 +384,12 @@ public class PrincipalGUI {
 
 			if(e.getSource() == button_atras)
 			{
-				radio.setTipo(false);
 				radio.cambioEstacion(false, radio.getTipoFrecuencia());
 				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 			}
 
 			if(e.getSource() == button_siguiente)
 			{
-				radio.setTipo(true);
 				radio.cambioEstacion(true, radio.getTipoFrecuencia());
 				txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				
