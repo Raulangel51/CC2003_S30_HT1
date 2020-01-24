@@ -88,13 +88,13 @@ public class Controlador implements Radio{
 	@Override
 	public boolean encenderApagar(boolean estado)
 	{
-		if(on == true)
+		if(estado == true)
 		{
-			on = false;
+			on = true;
 		}
 		else
 		{
-			on = true;
+			on = false;
 		}
 		
 		return on;
@@ -106,9 +106,7 @@ public class Controlador implements Radio{
 	 */
 	@Override
 	public void guardarEstacion(double estacion, boolean tipoFrecuencia, int boton) {
-		//if(on)//verifica que el radio este encendido
-		//{
-			//Guarda la estacion en la lista de FM
+		//Guarda la estacion en la lista de FM
 			if(tipoFrecuencia == true)
 			{
 				canales[0][boton] = estacion;
@@ -118,7 +116,6 @@ public class Controlador implements Radio{
 			{
 				canales[1][boton] = estacion;
 			}
-		//}
 		
 	}
 
