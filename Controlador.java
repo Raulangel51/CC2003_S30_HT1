@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Controlador implements Radio{
-	//private boolean tipo = true;
 	private boolean tipoFrecuencia = true;
 	private double estacion = 88.1;
 	private boolean on = true;
@@ -84,6 +83,7 @@ public class Controlador implements Radio{
 	@Override
 	public boolean encenderApagar(boolean estado)
 	{
+		//Apaga o enciende el radio
 		if(estado == true)
 		{
 			on = true;
@@ -122,23 +122,23 @@ public class Controlador implements Radio{
 	 */
 	@Override
 	public double seleccionarEstacion(boolean tipoFrecuencia, int boton) {
+		//selecciona la estacion de la lista correspondiente
 		int frecuencia = 0;
-		if(tipoFrecuencia == true)
+		if(tipoFrecuencia == true)//selecciona de la lista de FM
 		{
 			frecuencia =0;
 			if(canales[frecuencia][boton] != 0.0)
 				estacion = canales[frecuencia][boton];
 		}
 			
-		else 
+		else //selecciona de lista de AM
 		{
 			frecuencia = 1;
 			if(canales[frecuencia][boton] != 0.0)
 				estacion = canales[frecuencia][boton];
 			
 		}
-		double channel = canales[frecuencia][boton];
-			
+					
 		return canales[frecuencia][boton];
 	}
 	
