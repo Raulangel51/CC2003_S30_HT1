@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Controlador implements Radio{
-	private boolean tipo = true;
+	//private boolean tipo = true;
 	private boolean tipoFrecuencia = true;
 	private double estacion = 88.1;
 	private boolean on = true;
@@ -20,8 +20,6 @@ public class Controlador implements Radio{
 	public double cambioEstacion(boolean tipo, boolean tipoFrecuencia) {
 		// Metodo para pasar a la siguiente estacion, dependiendo la Frecuencia AM o FM
 			//Frecuencia AM
-		//if(on)//verifica que el radio este encendido
-		//{
 			if (tipoFrecuencia == true) {
 				if (tipo == true) {
 					if (Double.parseDouble(String.format("%.1f", this.getEstacion())) == 107.9) {
@@ -55,7 +53,6 @@ public class Controlador implements Radio{
 					this.setEstacion(a);
 				}
 			}
-		//}
 		return estacion;
 		
 	}
@@ -67,18 +64,17 @@ public class Controlador implements Radio{
 	@Override
 	public boolean cambioTipoFrecuencia(boolean tipo) {
 		
-		//if(on)//verifica que el radio este encendido
-		//{
-			//si tipo es igual a true se encuentra en FM
-			if (tipo == true) {
-				setEstacion(88.1);
-			}
-			//si tipo es igual a False se encuentra en AM
-			if (tipo == false) {
-				setEstacion(540);
-			}
-		//}
-		
+		//si tipo es igual a true se encuentra en FM
+		if (tipo == true) {
+			this.estacion = 540;
+			this.setTipoFrecuencia(false);
+		}
+		//si tipo es igual a False se encuentra en AM
+		if (tipo == false) {
+			this.estacion = 88.1;
+			this.setTipoFrecuencia(true);
+			
+		}
 		return tipoFrecuencia;
 	}
 
@@ -126,20 +122,24 @@ public class Controlador implements Radio{
 	 */
 	@Override
 	public double seleccionarEstacion(boolean tipoFrecuencia, int boton) {
-		//if(on == true)//verifica que el radio este encendido
-		//{
-			// devuelve la estacion dependiendo el boton y la estacion que desea
-			int frecuencia = 0;
-			if(tipoFrecuencia == true) 
-				frecuencia =0;
-			else 
-				frecuencia = 1;
-			return canales[frecuencia][boton];
-		//}
-		//else 
-		//{
-			//return 0;
-		//}
+		int frecuencia = 0;
+		if(tipoFrecuencia == true)
+		{
+			frecuencia =0;
+			if(canales[frecuencia][boton] != 0.0)
+				estacion = canales[frecuencia][boton];
+		}
+			
+		else 
+		{
+			frecuencia = 1;
+			if(canales[frecuencia][boton] != 0.0)
+				estacion = canales[frecuencia][boton];
+			
+		}
+		double channel = canales[frecuencia][boton];
+			
+		return canales[frecuencia][boton];
 	}
 	
 	/**
@@ -167,20 +167,12 @@ public class Controlador implements Radio{
 	}
 
 
-	/**
-	 * Set de tipo, indicador para pasar a la siguiente cancion o a la anterior
-	 * @param tipo
-	 */
-	public void setTipo(boolean tipo) {
-		this.tipo = tipo;
-	}
-	
-	
+		
 	/**
 	 * Cambia la frecuencia de la radio
 	 * @param tipoFrecuencia, true si esta en FM o false si esta en AM
 	 */
-	public void setTipoFrecuencia(boolean tipoFrecuencia) {
+	private void setTipoFrecuencia(boolean tipoFrecuencia) {
 		this.tipoFrecuencia = tipoFrecuencia;
 	}
 

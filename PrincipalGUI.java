@@ -192,193 +192,158 @@ public class PrincipalGUI {
 		{
 			if(e.getSource() == btnCanal_1)
 			{
-				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(radio.getTipoFrecuencia(),0));
-				if(radio.getEstacion() != 0.0)
+				
+				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 0) != 0.0)
 				{
-					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),0) ));
 				}
 				else
 				{
 					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
-					radio.setEstacion(estacion);
-					txtEstacion.setText(String.format("%.1f", estacion));
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 			}
 
 			if (e.getSource()==btnCanal_2)
 			{
-				double estacion = radio.getEstacion();
-				radio.setEstacion(radio.seleccionarEstacion(radio.getTipoFrecuencia(),1));
-				if(radio.getEstacion() != 0.0)
+				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 1) != 0.0)
 				{
-					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),1) ));
 				}
 				else
 				{
 					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
-					radio.setEstacion(estacion);
-					txtEstacion.setText(String.format("%.1f", estacion));
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 			}
 
 			if(e.getSource() == btnCanal_3)
 			{
-				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(radio.getTipoFrecuencia(),2));
-				if(radio.getEstacion() != 0.0)
+				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 2) != 0.0)
 				{
-					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),2) ));
 				}
 				else
 				{
 					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
-					radio.setEstacion(estacion);
-					txtEstacion.setText(String.format("%.1f", estacion));
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 			}
 
 			if (e.getSource() == btnCanal_4)
 			{
-				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(radio.getTipoFrecuencia(),3));
-				if(radio.getEstacion() != 0.0)
+				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 3) != 0.0)
 				{
-					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),3) ));
 				}
 				else
 				{
 					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
-					radio.setEstacion(estacion);
-					txtEstacion.setText(String.format("%.1f", estacion));
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 			}
 
 			if ( e.getSource() == btnCanal_5)
 			{
-				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(radio.getTipoFrecuencia(),4));
-				if(radio.getEstacion() != 0.0)
+				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 4) != 0.0)
 				{
-					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),4) ));
 				}
 				else
 				{
 					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
-					radio.setEstacion(estacion);
-					txtEstacion.setText(String.format("%.1f", estacion));
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 			}
 
 			if(e.getSource() == btnCanal_6)
 			{
-				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(radio.getTipoFrecuencia(),5));
-				if(radio.getEstacion() != 0.0)
+				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 5) != 0.0)
 				{
-					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),5) ));
 				}
 				else
 				{
 					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
-					radio.setEstacion(estacion);
-					txtEstacion.setText(String.format("%.1f", estacion));
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 			}
 
 			if(e.getSource() == btnCanal_7)
 			{
-				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(radio.getTipoFrecuencia(),6));
-				if(radio.getEstacion() != 0.0)
+				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 6) != 0.0)
 				{
-					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),6) ));
 				}
 				else
 				{
 					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
-					radio.setEstacion(estacion);
-					txtEstacion.setText(String.format("%.1f", estacion));
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 			}
 
 			if(e.getSource() == btnCanal_8)
 			{
-				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(radio.getTipoFrecuencia(),7));
-				if(radio.getEstacion() != 0.0)
+				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 7) != 0.0)
 				{
-					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),7) ));
 				}
 				else
 				{
 					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
-					radio.setEstacion(estacion);
-					txtEstacion.setText(String.format("%.1f", estacion));
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 			}
 
 			if(e.getSource() == btnCanal_9)
 			{
-				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(radio.getTipoFrecuencia(),8));
-				if(radio.getEstacion() != 0.0)
+				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 8) != 0.0)
 				{
-					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),8) ));
 				}
 				else
 				{
 					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
-					radio.setEstacion(estacion);
-					txtEstacion.setText(String.format("%.1f", estacion));
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 			}
 
 			if(e.getSource() == btnCanal_10)
 			{
-				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(radio.getTipoFrecuencia(),9));
-				if(radio.getEstacion() != 0.0)
+				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 9) != 0.0)
 				{
-					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),9) ));
 				}
 				else
 				{
 					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
-					radio.setEstacion(estacion);
-					txtEstacion.setText(String.format("%.1f", estacion));
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 			}
 
 			if(e.getSource() == btnCanal_11)
 			{
-				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(radio.getTipoFrecuencia(),10));
-				if(radio.getEstacion() != 0.0)
+				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 10) != 0.0)
 				{
-					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),10) ));
 				}
 				else
 				{
 					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
-					radio.setEstacion(estacion);
-					txtEstacion.setText(String.format("%.1f", estacion));
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 			}
 
 			if(e.getSource() == btnCanal_12)
 			{
-				double estacion = radio.getEstacion();
-				radio .setEstacion(radio.seleccionarEstacion(radio.getTipoFrecuencia(),11));
-				if(radio.getEstacion() != 0.0)
+				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 11) != 0.0)
 				{
-					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),11) ));
 				}
 				else
 				{
 					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
-					radio.setEstacion(estacion);
-					txtEstacion.setText(String.format("%.1f", estacion));
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 			}
 
@@ -447,13 +412,13 @@ public class PrincipalGUI {
 				
 				cont++;
 				if (cont == 1) {
-					radio.setTipoFrecuencia(false);
+					//radio.setTipoFrecuencia(false);
 					JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: AM");
 					radio.cambioTipoFrecuencia(radio.getTipoFrecuencia());
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 				if (cont == 2) {
-					radio.setTipoFrecuencia(true);
+					//radio.setTipoFrecuencia(true);
 					JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: FM");
 					cont = 0;
 					radio.cambioTipoFrecuencia(radio.getTipoFrecuencia());
