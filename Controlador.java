@@ -144,6 +144,7 @@ public class Controlador implements Radio{
 	
 	/**
 	 * getEstacion devuelve la estacion actual del radio
+	 * @return estacion
 	 */
 	public double getEstacion()
 	{
@@ -152,6 +153,7 @@ public class Controlador implements Radio{
 	
 	/**
 	 * get tipoFrecuencia devuelve si esta en AM o FM
+	 * @return tipo de frecuencia actual
 	 */
 	public boolean getTipoFrecuencia()
 	{
@@ -160,6 +162,7 @@ public class Controlador implements Radio{
 	
 	/**
 	 * getEstado devuelve si el radio esta on o off
+	 * @return el estado de radio
 	 */
 	public boolean getEstado()
 	{
