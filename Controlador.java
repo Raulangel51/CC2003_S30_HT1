@@ -16,7 +16,7 @@ public class Controlador implements Radio{
 	 * @param tipo(true si pasa a la siguiente y false a la anterior), tipoFrecuencia(true si esta en FM y false si esta en AM)
 	 */
 		@Override
-	public double cambioEstacion(boolean tipoFrecuencia, boolean tipo) {
+	public double cambioEstacion(boolean tipo, boolean tipoFrecuencia) {
 		// Metodo para pasar a la siguiente estacion, dependiendo la Frecuencia AM o FM
 			//Frecuencia AM
 			if (tipoFrecuencia == true) {
