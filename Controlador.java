@@ -105,12 +105,12 @@ public class Controlador implements Radio{
 		//Guarda la estacion en la lista de FM
 			if(tipoFrecuencia == true)
 			{
-				canales[0][boton] = estacion;
+				canales[0][boton-1] = estacion;
 			}
 			//Guarda la estacion en la lista de AM
 			else
 			{
-				canales[1][boton] = estacion;
+				canales[1][boton-1] = estacion;
 			}
 		
 	}
@@ -127,19 +127,19 @@ public class Controlador implements Radio{
 		if(tipoFrecuencia == true)//selecciona de la lista de FM
 		{
 			frecuencia =0;
-			if(canales[frecuencia][boton] != 0.0)
-				estacion = canales[frecuencia][boton];
+			if(canales[frecuencia][boton-1] != 0.0)
+				estacion = canales[frecuencia][boton-1];
 		}
 			
 		else //selecciona de lista de AM
 		{
 			frecuencia = 1;
-			if(canales[frecuencia][boton] != 0.0)
-				estacion = canales[frecuencia][boton];
+			if(canales[frecuencia][boton-1] != 0.0)
+				estacion = canales[frecuencia][boton-1];
 			
 		}
 					
-		return canales[frecuencia][boton];
+		return canales[frecuencia][boton-1];
 	}
 	
 	/**

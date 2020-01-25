@@ -193,19 +193,6 @@ public class PrincipalGUI {
 			if(e.getSource() == btnCanal_1)
 			{
 				
-				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 0) != 0.0)
-				{
-					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),0) ));
-				}
-				else
-				{
-					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
-					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
-				}
-			}
-
-			if (e.getSource()==btnCanal_2)
-			{
 				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 1) != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),1) ));
@@ -217,7 +204,7 @@ public class PrincipalGUI {
 				}
 			}
 
-			if(e.getSource() == btnCanal_3)
+			if (e.getSource()==btnCanal_2)
 			{
 				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 2) != 0.0)
 				{
@@ -230,7 +217,7 @@ public class PrincipalGUI {
 				}
 			}
 
-			if (e.getSource() == btnCanal_4)
+			if(e.getSource() == btnCanal_3)
 			{
 				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 3) != 0.0)
 				{
@@ -243,7 +230,7 @@ public class PrincipalGUI {
 				}
 			}
 
-			if ( e.getSource() == btnCanal_5)
+			if (e.getSource() == btnCanal_4)
 			{
 				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 4) != 0.0)
 				{
@@ -256,7 +243,7 @@ public class PrincipalGUI {
 				}
 			}
 
-			if(e.getSource() == btnCanal_6)
+			if ( e.getSource() == btnCanal_5)
 			{
 				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 5) != 0.0)
 				{
@@ -269,7 +256,7 @@ public class PrincipalGUI {
 				}
 			}
 
-			if(e.getSource() == btnCanal_7)
+			if(e.getSource() == btnCanal_6)
 			{
 				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 6) != 0.0)
 				{
@@ -282,7 +269,7 @@ public class PrincipalGUI {
 				}
 			}
 
-			if(e.getSource() == btnCanal_8)
+			if(e.getSource() == btnCanal_7)
 			{
 				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 7) != 0.0)
 				{
@@ -295,7 +282,7 @@ public class PrincipalGUI {
 				}
 			}
 
-			if(e.getSource() == btnCanal_9)
+			if(e.getSource() == btnCanal_8)
 			{
 				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 8) != 0.0)
 				{
@@ -308,7 +295,7 @@ public class PrincipalGUI {
 				}
 			}
 
-			if(e.getSource() == btnCanal_10)
+			if(e.getSource() == btnCanal_9)
 			{
 				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 9) != 0.0)
 				{
@@ -321,7 +308,7 @@ public class PrincipalGUI {
 				}
 			}
 
-			if(e.getSource() == btnCanal_11)
+			if(e.getSource() == btnCanal_10)
 			{
 				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 10) != 0.0)
 				{
@@ -334,11 +321,24 @@ public class PrincipalGUI {
 				}
 			}
 
-			if(e.getSource() == btnCanal_12)
+			if(e.getSource() == btnCanal_11)
 			{
 				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 11) != 0.0)
 				{
 					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),11) ));
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "El canal de la frecuencia que eligio esta vacio.");
+					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
+				}
+			}
+
+			if(e.getSource() == btnCanal_12)
+			{
+				if(radio.seleccionarEstacion(radio.getTipoFrecuencia(), 12) != 0.0)
+				{
+					txtEstacion.setText(String.format("%.1f",radio.seleccionarEstacion(radio.getTipoFrecuencia(),12) ));
 				}
 				else
 				{
@@ -372,7 +372,7 @@ public class PrincipalGUI {
 					JFrame frame = new JFrame("Canal de guardado");
 					String canale = (String) JOptionPane.showInputDialog(frame, "¿Canal en que desea guardar la estacion?", "Guarda", JOptionPane.QUESTION_MESSAGE, null, canales, canales[0]);
 					int canal = Integer.parseInt(canale);
-					radio.guardarEstacion(radio.getEstacion(), radio.getTipoFrecuencia(), (canal-1) );
+					radio.guardarEstacion(radio.getEstacion(), radio.getTipoFrecuencia(), (canal) );
 				}
 				catch(Exception e1)
 				{
