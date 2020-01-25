@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 public class Controlador implements Radio{
 	private boolean tipoFrecuencia = true;
 	private double estacion = 88.1;
-	private boolean on = true;
+	private boolean estado = true;
 	private double [][] canales = new double [2][12];
 	
 	public Controlador() {
@@ -86,14 +86,14 @@ public class Controlador implements Radio{
 		//Apaga o enciende el radio
 		if(estado == true)
 		{
-			on = true;
+			estado = true;
 		}
 		else
 		{
-			on = false;
+			estado = false;
 		}
 		
-		return on;
+		return estado;
 	}
 
 	/**
@@ -163,7 +163,7 @@ public class Controlador implements Radio{
 	 */
 	public boolean getEstado()
 	{
-		return on;
+		return estado;
 	}
 
 
