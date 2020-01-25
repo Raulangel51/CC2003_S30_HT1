@@ -412,13 +412,11 @@ public class PrincipalGUI {
 				
 				cont++;
 				if (cont == 1) {
-					//radio.setTipoFrecuencia(false);
 					JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: AM");
 					radio.cambioTipoFrecuencia(radio.getTipoFrecuencia());
 					txtEstacion.setText(String.format("%.1f", radio.getEstacion()));
 				}
 				if (cont == 2) {
-					//radio.setTipoFrecuencia(true);
 					JOptionPane.showMessageDialog(null, "Ahora se encuentra en frecuencia: FM");
 					cont = 0;
 					radio.cambioTipoFrecuencia(radio.getTipoFrecuencia());
